@@ -5,7 +5,7 @@ export default function Footer() {
 
         {/* COMPANY INFO */}
         <div>
-          <h2 className="text-2xl font-bold">ELDOPLY MRF</h2>
+          <h2 className="text-2xl font-bold">WARENG MRF</h2>
           <p className="mt-4 text-gray-200 text-sm leading-relaxed">
             Transforming waste into wealth through innovative recycling,
             material recovery, and sustainable community empowerment.
@@ -46,7 +46,7 @@ export default function Footer() {
           </p>
 
           <p className="text-gray-200 text-sm mt-2">
-            Email: info@eldoply.co.ke
+            Email: info@mrf.co.ke
           </p>
 
           <p className="text-gray-200 text-sm mt-2">
@@ -57,7 +57,7 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="border-t border-green-700 mt-10 pt-6 text-center text-gray-300 text-sm">
-        © {new Date().getFullYear()} ELDOPLY MRF. All rights reserved.
+        © {new Date().getFullYear()} WARENG MRF. All rights reserved.
       </div>
     </footer>
   );

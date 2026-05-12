@@ -30,7 +30,7 @@ export default function Navbar() {
             className="h-10 w-10 object-contain"
           />
           <h1 className="text-xl font-bold text-green-700">
-            ELDOPLY MRF
+            WARENG MRF
           </h1>
         </div>
 

@@ -16,13 +16,13 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.12,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 25 },
   show: { opacity: 1, y: 0 },
 };
 
@@ -31,15 +31,21 @@ export default function Gallery() {
     <div className="pt-24 pb-20 bg-gray-50">
 
       {/* HERO */}
-      <section className="text-center px-6">
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-center px-6"
+      >
         <h1 className="text-4xl md:text-5xl font-bold text-green-700">
           Our Gallery
         </h1>
+
         <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-          A visual journey of our impact in waste management, recycling,
-          community empowerment, and sustainable production.
+          A visual journey of our impact in waste recovery, recycling innovation,
+          and community empowerment across Kenya.
         </p>
-      </section>
+      </motion.section>
 
       {/* GRID */}
       <motion.section
@@ -52,50 +58,68 @@ export default function Gallery() {
           <motion.div
             key={index}
             variants={item}
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            className="relative bg-white rounded-xl overflow-hidden shadow hover:shadow-xl"
+            className="group relative overflow-hidden rounded-2xl shadow-md bg-white"
           >
+
             {/* IMAGE */}
             <img
               src={img.src}
               alt={img.title}
-              className="h-48 w-full object-cover"
+              className="h-56 w-full object-cover group-hover:scale-110 transition duration-500"
             />
 
-            {/* OVERLAY */}
-            <div className="absolute inset-0 bg-black/0 hover:bg-black/40 transition flex items-end">
-              <p className="text-white text-sm font-semibold p-4 opacity-0 hover:opacity-100 transition">
+            {/* DARK OVERLAY */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition duration-300" />
+
+            {/* TITLE */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition duration-300">
+              <h3 className="text-white font-semibold text-sm">
                 {img.title}
-              </p>
+              </h3>
             </div>
+
           </motion.div>
         ))}
       </motion.section>
 
-      {/* IMPACT STRIP */}
-      <section className="mt-20 bg-green-700 text-white py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold">Real Work. Real Impact.</h2>
+      {/* IMPACT SECTION */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="mt-20 bg-green-700 text-white py-16 px-6 text-center"
+      >
+        <h2 className="text-3xl font-bold">
+          Real Work. Real Impact.
+        </h2>
+
         <p className="mt-4 text-green-100 max-w-2xl mx-auto">
-          Every image represents our commitment to transforming waste into wealth
-          and building sustainable communities.
+          Every image reflects our mission to transform waste into value,
+          create jobs, and build a cleaner environment.
         </p>
-      </section>
+      </motion.section>
 
       {/* CTA */}
-      <section className="mt-20 text-center px-6">
+      <motion.section
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="mt-20 text-center px-6"
+      >
         <h2 className="text-3xl font-bold text-green-700">
-          Want to Visit Our Facility?
+          Visit Our Facility
         </h2>
 
         <p className="mt-4 text-gray-600">
-          Partner with ELDOPLY MRF or schedule a visit to see our operations.
+          See how ELDOPLY MRF transforms waste into wealth in real time.
         </p>
 
-        <button className="mt-6 bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition-transform hover:scale-105">
+        <button className="mt-6 bg-green-700 text-white px-8 py-3 rounded-full hover:bg-green-800 transition hover:scale-105">
           Contact Us
         </button>
-      </section>
+      </motion.section>
 
     </div>
   );
