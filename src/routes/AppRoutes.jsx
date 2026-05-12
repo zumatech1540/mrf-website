@@ -9,6 +9,7 @@ import Gallery from "../pages/Gallery";
 import Blog from "../pages/Blog";
 import Resources from "../pages/Resources";
 import Contact from "../pages/Contact";
+import Partners from "../pages/Partners";
 
 
 export default function AppRoutes() {
@@ -26,6 +27,7 @@ export default function AppRoutes() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/partners" element={<Partners />} />
 
      
     </Routes>

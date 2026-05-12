@@ -7,7 +7,7 @@ export default function Products() {
           Eco-Friendly Products
         </h1>
         <p className="mt-4 text-gray-600 max-w-3xl mx-auto">
-          At ELDOPLY MRF, we transform recovered waste materials into valuable,
+          At  MRF, we transform recovered waste materials into valuable,
           durable, and sustainable products that support schools, communities,
           and green living.
         </p>
@@ -18,7 +18,7 @@ export default function Products() {
         {/* Product 1 */}
         <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
           <img
-            src="/images/products/desks.jpg"
+            src="/src/assets/desks.jpg"
             alt="Recycled School Desks"
             className="w-full h-48 object-cover"
           />
@@ -36,7 +36,7 @@ export default function Products() {
         {/* Product 2 */}
         <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
           <img
-            src="/images/products/chairs.jpg"
+            src="/src/assets/chairs.jpg"
             alt="Eco Chairs"
             className="w-full h-48 object-cover"
           />
@@ -54,7 +54,7 @@ export default function Products() {
         {/* Product 3 */}
         <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
           <img
-            src="/images/products/beehives.jpg"
+            src="/src/assets/beehives.jpg"
             alt="Beehives"
             className="w-full h-48 object-cover"
           />
@@ -72,7 +72,7 @@ export default function Products() {
         {/* Product 4 */}
         <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
           <img
-            src="/images/products/wood.jpg"
+            src="/src/assets/wood.jpg"
             alt="Recycled Timber"
             className="w-full h-48 object-cover"
           />
@@ -90,7 +90,7 @@ export default function Products() {
         {/* Product 5 */}
         <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
           <img
-            src="/images/products/eco-bricks.jpg"
+            src="/src/assets/eco-bricks.jpg"
             alt="Eco Bricks"
             className="w-full h-48 object-cover"
           />
@@ -108,7 +108,7 @@ export default function Products() {
         {/* Product 6 */}
         <div className="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
           <img
-            src="/images/products/decor.jpg"
+            src="/src/assets/decor.jpg"
             alt="Eco Decor"
             className="w-full h-48 object-cover"
           />

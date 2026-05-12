@@ -21,7 +21,7 @@ export default function Contact() {
 
           <div className="mt-6 space-y-4 text-gray-700">
             <p><strong>Location:</strong> Nairobi, Kenya</p>
-            <p><strong>Email:</strong> info@eldoply.co.ke</p>
+            <p><strong>Email:</strong> info@mrf.co.ke</p>
             <p><strong>Phone:</strong> +254 700 000 000</p>
             <p><strong>Working Hours:</strong> Mon - Fri (8:00 AM - 5:00 PM)</p>
           </div>

@@ -1,6 +1,18 @@
 import Hero from "../components/home/Hero";
 import { motion } from "framer-motion";
 
+import recyclingImg from "../assets/recycling.jpg";
+import sortingImg from "../assets/waste-sorting.jpg";
+import communityImg from "../assets/community.jpg";
+import plasticsImg from "../assets/plastics.jpg";
+
+import {
+  FaRecycle,
+  FaIndustry,
+  FaUsers,
+  FaLeaf,
+} from "react-icons/fa";
+
 export default function Home() {
   return (
     <div className="bg-white text-gray-800 overflow-hidden">
@@ -43,49 +55,45 @@ export default function Home() {
               communities and sustainable livelihoods.
             </p>
 
-            <button className="mt-8 bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-semibold transition">
+            <button className="mt-8 bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg hover:shadow-xl">
               Learn More About Us
             </button>
           </div>
 
           {/* RIGHT */}
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-2 gap-5">
 
-            <div className="bg-green-50 p-8 rounded-3xl shadow-sm hover:shadow-lg transition">
-              <h3 className="text-4xl font-bold text-green-700">
-                65,350
-              </h3>
-              <p className="mt-3 text-gray-600 font-medium">
-                Kilograms of Waste Processed
-              </p>
-            </div>
+            <motion.img
+              whileHover={{ scale: 1.03 }}
+              src={recyclingImg}
+              alt="Recycling"
+              className="rounded-3xl h-64 w-full object-cover shadow-xl"
+            />
 
-            <div className="bg-white border p-8 rounded-3xl shadow-sm hover:shadow-lg transition">
-              <h3 className="text-4xl font-bold text-green-700">
-                KES 4.5M
-              </h3>
-              <p className="mt-3 text-gray-600 font-medium">
-                Annual Sales Revenue
-              </p>
-            </div>
+            <motion.img
+              whileHover={{ scale: 1.03 }}
+              src={sortingImg}
+              alt="Waste Sorting"
+              className="rounded-3xl h-64 w-full object-cover shadow-xl mt-10"
+            />
 
-            <div className="bg-white border p-8 rounded-3xl shadow-sm hover:shadow-lg transition">
-              <h3 className="text-4xl font-bold text-green-700">
-                40+
-              </h3>
-              <p className="mt-3 text-gray-600 font-medium">
-                Local Collectors Supported
-              </p>
-            </div>
+            <motion.div
+              whileHover={{ y: -5 }}
+              className="bg-green-700 text-white p-8 rounded-3xl shadow-xl flex flex-col justify-center"
+            >
+              <h3 className="text-5xl font-bold">65K+</h3>
 
-            <div className="bg-green-700 text-white p-8 rounded-3xl shadow-lg">
-              <h3 className="text-4xl font-bold">
-                12
-              </h3>
-              <p className="mt-3 text-green-100 font-medium">
-                Waste Streams Handled
+              <p className="mt-4 text-lg text-green-100">
+                Kilograms Recovered
               </p>
-            </div>
+            </motion.div>
+
+            <motion.img
+              whileHover={{ scale: 1.03 }}
+              src={communityImg}
+              alt="Community"
+              className="rounded-3xl h-72 w-full object-cover shadow-xl"
+            />
 
           </div>
 
@@ -123,10 +131,10 @@ export default function Home() {
             {/* CARD */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition"
+              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-transparent hover:border-green-200"
             >
-              <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                ♻️
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-3xl text-green-700 shadow-md">
+                <FaRecycle />
               </div>
 
               <h3 className="mt-6 text-2xl font-bold text-gray-900">
@@ -142,10 +150,10 @@ export default function Home() {
             {/* CARD */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition"
+              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-transparent hover:border-green-200"
             >
-              <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                🏭
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-3xl text-green-700 shadow-md">
+                <FaIndustry />
               </div>
 
               <h3 className="mt-6 text-2xl font-bold text-gray-900">
@@ -161,10 +169,10 @@ export default function Home() {
             {/* CARD */}
             <motion.div
               whileHover={{ y: -10 }}
-              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition"
+              className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-2xl transition duration-300 border border-transparent hover:border-green-200"
             >
-              <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                🌍
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center text-3xl text-green-700 shadow-md">
+                <FaUsers />
               </div>
 
               <h3 className="mt-6 text-2xl font-bold text-gray-900">
@@ -195,6 +203,11 @@ export default function Home() {
             <h2 className="mt-6 text-4xl md:text-5xl font-bold text-gray-900">
               Waste Streams We Handle
             </h2>
+
+            <p className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+              We recover, sort, and process multiple waste streams to reduce
+              environmental pollution and promote sustainable recycling.
+            </p>
           </div>
 
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -209,14 +222,19 @@ export default function Home() {
               "Polythene",
               "Textiles",
             ].map((item, index) => (
-              <div
+              <motion.div
+                whileHover={{ y: -8 }}
                 key={index}
-                className="bg-gray-50 border hover:border-green-500 p-6 rounded-2xl text-center transition"
+                className="bg-white border hover:border-green-500 hover:bg-green-50 p-6 rounded-2xl text-center transition duration-300 shadow-sm hover:shadow-xl"
               >
+                <div className="flex justify-center mb-4 text-green-700 text-3xl">
+                  <FaLeaf />
+                </div>
+
                 <h3 className="font-bold text-lg text-gray-800">
                   {item}
                 </h3>
-              </div>
+              </motion.div>
             ))}
 
           </div>
@@ -231,9 +249,21 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="py-24 px-6 bg-green-700 text-white"
+        className="relative py-24 px-6 text-white overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto">
+
+        {/* BACKGROUND IMAGE */}
+        <img
+          src={plasticsImg}
+          alt="Background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-green-900/80"></div>
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-7xl mx-auto">
 
           <div className="text-center">
 
@@ -285,10 +315,11 @@ export default function Home() {
           </div>
 
         </div>
+
       </motion.section>
 
       {/* CTA */}
-      <section className="py-24 px-6 bg-white text-center">
+      <section className="py-24 px-6 bg-gradient-to-br from-green-50 to-white text-center">
 
         <div className="max-w-4xl mx-auto">
 
@@ -308,11 +339,11 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center">
 
-            <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-full font-semibold transition">
+            <button className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-full font-semibold transition duration-300 shadow-lg hover:shadow-xl">
               Become a Partner
             </button>
 
-            <button className="border border-green-700 text-green-700 hover:bg-green-700 hover:text-white px-8 py-4 rounded-full font-semibold transition">
+            <button className="border border-green-700 text-green-700 hover:bg-green-700 hover:text-white px-8 py-4 rounded-full font-semibold transition duration-300">
               Contact Us
             </button>
 
