@@ -18,76 +18,159 @@ import community2 from "../assets/community2.jpg";
 
 const partnersData = [
   {
-    category: "Government Partners",
+    category: "Government & Regulatory Partners",
+    description:
+      "Collaborating with county and national agencies to advance sustainable waste management and environmental compliance.",
     partners: [
-      { name: "County Government", logo: govt1 },
-      { name: "National Environment Authority", logo: govt2 },
+      {
+        name: "Uasin Gishu County Government",
+        logo: govt1,
+      },
+      {
+        name: "Environmental Management Authority",
+        logo: govt2,
+      },
     ],
   },
 
   {
-    category: "Private Sector Partners",
+    category: "Private Sector & Manufacturing",
+    description:
+      "Working with industries and manufacturers to supply recyclable raw materials and promote circular economy solutions.",
     partners: [
-      { name: "Eco Industries Ltd", logo: private1 },
-      { name: "Green Plastics Kenya", logo: private2 },
-      { name: "Sustainable Packaging Co.", logo: private3 },
+      {
+        name: "Eco Industries Ltd",
+        logo: private1,
+      },
+      {
+        name: "Green Plastics Kenya",
+        logo: private2,
+      },
+      {
+        name: "Sustainable Packaging Africa",
+        logo: private3,
+      },
     ],
   },
 
   {
-    category: "NGO & Development Partners",
+    category: "NGOs & Development Organizations",
+    description:
+      "Partnering with environmental and development organizations to expand climate action and community empowerment programs.",
     partners: [
-      { name: "Clean Earth Foundation", logo: ngo1 },
-      { name: "Green Future Initiative", logo: ngo2 },
+      {
+        name: "Clean Earth Foundation",
+        logo: ngo1,
+      },
+      {
+        name: "Green Future Initiative",
+        logo: ngo2,
+      },
     ],
   },
 
   {
-    category: "Recycling & Industry Partners",
+    category: "Recycling & Recovery Networks",
+    description:
+      "Strengthening recycling ecosystems through partnerships with processors, recyclers, and recovery companies.",
     partners: [
-      { name: "Recycle Hub Africa", logo: recycler1 },
-      { name: "Waste Recovery Group", logo: recycler2 },
+      {
+        name: "Recycle Hub Africa",
+        logo: recycler1,
+      },
+      {
+        name: "Waste Recovery Group",
+        logo: recycler2,
+      },
     ],
   },
 
   {
-    category: "Community & Schools",
+    category: "Community & Education Partners",
+    description:
+      "Supporting youth groups, schools, and local communities through training, waste collection, and sustainability programs.",
     partners: [
-      { name: "Eldoret Youth Group", logo: community1 },
-      { name: "Green Schools Network", logo: community2 },
+      {
+        name: "Eldoret Youth Green Network",
+        logo: community1,
+      },
+      {
+        name: "Green Schools Initiative",
+        logo: community2,
+      },
     ],
   },
 ];
 
 export default function Partners() {
   return (
-    <div className="pt-24 pb-20 bg-gray-50 overflow-hidden">
+    <div className="pt-24 pb-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
 
       {/* HERO */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
         className="text-center px-6"
       >
-        <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
-          OUR PARTNERS
+
+        <span className="bg-green-100 text-green-700 px-5 py-2 rounded-full text-sm font-semibold tracking-wide">
+          STRATEGIC PARTNERSHIPS
         </span>
 
-        <h1 className="mt-6 text-4xl md:text-6xl font-bold text-gray-900">
-          Building a Sustainable Future
-          <span className="text-green-700"> Together</span>
+        <h1 className="mt-8 text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+          Partnerships Driving
+          <span className="block text-green-700">
+            Sustainable Impact
+          </span>
         </h1>
 
-        <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
-          We collaborate with government agencies, private companies, NGOs,
-          recyclers, and communities to drive environmental sustainability and
-          circular economy solutions.
+        <p className="mt-6 text-gray-600 max-w-4xl mx-auto text-lg leading-relaxed">
+          Wareng Material Recovery Facility collaborates with governments,
+          industries, recyclers, NGOs, and communities to strengthen recycling
+          systems, create green jobs, and accelerate Kenya’s transition toward
+          a circular economy.
         </p>
+
       </motion.section>
 
-      {/* PARTNERS LIST */}
-      <section className="mt-20 px-6 max-w-7xl mx-auto space-y-20">
+      {/* STATS */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="mt-16 px-6"
+      >
+
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center border border-gray-100">
+            <h2 className="text-4xl font-bold text-green-700">20+</h2>
+            <p className="mt-2 text-gray-600">Active Partners</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center border border-gray-100">
+            <h2 className="text-4xl font-bold text-green-700">65K+</h2>
+            <p className="mt-2 text-gray-600">KG Waste Recovered</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center border border-gray-100">
+            <h2 className="text-4xl font-bold text-green-700">40+</h2>
+            <p className="mt-2 text-gray-600">Collectors Supported</p>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-sm p-8 text-center border border-gray-100">
+            <h2 className="text-4xl font-bold text-green-700">KES 4.5M</h2>
+            <p className="mt-2 text-gray-600">Annual Sales Revenue</p>
+          </div>
+
+        </div>
+
+      </motion.section>
+
+      {/* PARTNER SECTIONS */}
+      <section className="mt-24 px-6 max-w-7xl mx-auto space-y-24">
 
         {partnersData.map((group, i) => (
           <motion.div
@@ -95,36 +178,58 @@ export default function Partners() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
 
-            {/* CATEGORY TITLE */}
-            <h2 className="text-2xl font-bold text-green-700 mb-8 text-center">
-              {group.category}
-            </h2>
+            {/* CATEGORY HEADER */}
+            <div className="text-center max-w-3xl mx-auto">
+
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                {group.category}
+              </h2>
+
+              <div className="w-24 h-1 bg-green-700 mx-auto mt-4 rounded-full"></div>
+
+              <p className="mt-6 text-gray-600 leading-relaxed">
+                {group.description}
+              </p>
+
+            </div>
 
             {/* GRID */}
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div className="mt-14 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
               {group.partners.map((partner, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                  whileHover={{
+                    y: -10,
+                    scale: 1.03,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="group bg-white rounded-3xl p-8 shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300 text-center relative overflow-hidden"
                 >
 
+                  {/* TOP GLOW */}
+                  <div className="absolute top-0 left-0 w-full h-1 bg-green-700 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
+
                   {/* LOGO */}
-                  <div className="w-24 h-24 flex items-center justify-center">
+                  <div className="w-28 h-28 mx-auto rounded-2xl bg-gray-50 flex items-center justify-center p-4">
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="max-h-full object-contain"
+                      className="max-h-full object-contain transition duration-300 group-hover:scale-110"
                     />
                   </div>
 
                   {/* NAME */}
-                  <h3 className="mt-4 font-semibold text-gray-800">
+                  <h3 className="mt-6 font-bold text-gray-800 text-lg">
                     {partner.name}
                   </h3>
+
+                  <p className="mt-2 text-sm text-gray-500">
+                    Strategic Sustainability Partner
+                  </p>
 
                 </motion.div>
               ))}
@@ -141,34 +246,23 @@ export default function Partners() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="mt-24 bg-green-700 text-white py-16 px-6 text-center"
+        className="mt-28 bg-green-700 text-white py-20 px-6"
       >
 
-        <h2 className="text-3xl font-bold">
-          Strong Partnerships, Real Impact
-        </h2>
+        <div className="max-w-5xl mx-auto text-center">
 
-        <p className="mt-4 text-green-100 max-w-3xl mx-auto">
-          Together with our partners, we are reducing waste, creating jobs,
-          and building a cleaner and more sustainable Kenya.
-        </p>
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+            Strong Partnerships.
+            <span className="block text-green-100">
+              Real Environmental Impact.
+            </span>
+          </h2>
 
-        <div className="mt-10 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-
-          <div>
-            <h3 className="text-4xl font-bold">20+</h3>
-            <p className="text-green-100 mt-2">Active Partners</p>
-          </div>
-
-          <div>
-            <h3 className="text-4xl font-bold">65K+</h3>
-            <p className="text-green-100 mt-2">KG Waste Recovered</p>
-          </div>
-
-          <div>
-            <h3 className="text-4xl font-bold">40+</h3>
-            <p className="text-green-100 mt-2">Communities Supported</p>
-          </div>
+          <p className="mt-6 text-green-100 text-lg leading-relaxed max-w-3xl mx-auto">
+            Through collaboration, innovation, and shared responsibility,
+            Wareng MRF is transforming waste into economic opportunity while
+            reducing environmental pollution across communities in Kenya.
+          </p>
 
         </div>
 
@@ -182,20 +276,21 @@ export default function Partners() {
         className="mt-24 text-center px-6"
       >
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-12 border border-gray-100">
 
           <h2 className="text-4xl font-bold text-gray-900">
-            Want to Become a Partner?
+            Become a Sustainability Partner
           </h2>
 
-          <p className="mt-4 text-gray-600">
-            Join us in driving environmental sustainability and circular economy
-            solutions across Kenya and beyond.
+          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+            Join Wareng Material Recovery Facility in building cleaner cities,
+            empowering communities, and advancing circular economy solutions
+            through impactful partnerships.
           </p>
 
           <a
             href="/contact"
-            className="inline-block mt-8 bg-green-700 text-white px-8 py-4 rounded-full font-semibold hover:bg-green-800 transition"
+            className="inline-block mt-8 bg-green-700 text-white px-10 py-4 rounded-full font-semibold hover:bg-green-800 transition duration-300 shadow-lg hover:scale-105"
           >
             Partner With Us
           </a>

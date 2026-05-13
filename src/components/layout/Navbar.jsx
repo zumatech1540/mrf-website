@@ -59,12 +59,7 @@ export default function Navbar() {
         {/* CTA BUTTON */}
         <div className="hidden md:flex items-center gap-3">
 
-          <a
-            href="/partners"
-            className="text-sm font-medium text-green-700 hover:text-green-800 transition"
-          >
-            Become a Partner
-          </a>
+          
 
           <a
             href="/contact"

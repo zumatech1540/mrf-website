@@ -87,7 +87,7 @@ export default function About() {
           <div className="relative">
 
             <img
-              src="/images/about/about-main.jpg"
+              src="/src/assets/community.jpg"
               alt="Wareng Material Recovery Facility"
               className="rounded-3xl shadow-2xl object-cover w-full h-[500px]"
             />
@@ -133,8 +133,8 @@ export default function About() {
             </h3>
 
             <p className="mt-5 text-gray-600 leading-relaxed text-lg">
-              To be a national leader in sustainable material recovery,
-              driving innovation and circular economy practices across Kenya.
+              To be a national leader in sustainable material recovery, driving innovation and circular
+                economy practices across Kenya.
             </p>
 
           </motion.div>
@@ -157,9 +157,8 @@ export default function About() {
             </h3>
 
             <p className="mt-5 text-gray-600 leading-relaxed text-lg">
-              To recover, process, and repurpose waste responsibly while
-              generating value for communities, industries, and the environment
-              through sustainable recycling and material recovery solutions.
+              To recover, process, and repurpose waste responsibly, generating value for communities,
+                industries, and the environment.
             </p>
 
           </motion.div>
@@ -249,7 +248,7 @@ export default function About() {
               <div className="text-5xl">👨‍👩‍👧‍👦</div>
 
               <h3 className="mt-6 text-2xl font-bold">
-                Community
+                Community Empowerment
               </h3>
 
               <p className="mt-4 text-gray-600 leading-relaxed">

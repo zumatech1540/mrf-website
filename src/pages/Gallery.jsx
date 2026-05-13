@@ -10,49 +10,49 @@ import {
 
 const images = [
   {
-    src: "/images/gallery/waste-collection.jpg",
+    src: "/src/assets/waste-sorting.jpg",
     title: "Waste Collection",
     category: "Operations",
   },
 
   {
-    src: "/images/gallery/sorting-facility.jpg",
+    src: "/src/assets/sorting-facility.jpg",
     title: "Sorting Facility",
     category: "Processing",
   },
 
   {
-    src: "/images/gallery/recycling-process.jpg",
+    src: "/src/assets/manufacturing.jpg",
     title: "Recycling Process",
     category: "Recycling",
   },
 
   {
-    src: "/images/gallery/community-training.jpg",
+    src: "/src/assets/training.jpg",
     title: "Community Training",
     category: "Community",
   },
 
   {
-    src: "/images/gallery/eco-products.jpg",
+    src: "/src/assets/eco-products.jpg",
     title: "Eco Products",
     category: "Innovation",
   },
 
   {
-    src: "/images/gallery/team-work.jpg",
+    src: "/src/assets/TeamWork.jpg",
     title: "Team Work",
     category: "Team",
   },
 
   {
-    src: "/images/gallery/school-support.jpg",
+    src: "/src/assets/SchoolSupport.jpg",
     title: "School Support",
     category: "Education",
   },
 
   {
-    src: "/images/gallery/environment-cleanup.jpg",
+    src: "/src/assets/collection.jpg",
     title: "Environmental Cleanup",
     category: "Environment",
   },
@@ -114,7 +114,7 @@ export default function Gallery() {
         <div className="max-w-7xl mx-auto relative rounded-[40px] overflow-hidden shadow-2xl">
 
           <img
-            src="/images/gallery/recycling-process.jpg"
+            src="/src/assets/decor.jpg"
             alt="Featured"
             className="w-full h-[550px] object-cover"
           />

@@ -31,36 +31,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
 
           {/* LEFT */}
-          <div>
-            <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
-              ABOUT WARENG MRF
-            </span>
-
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-              Building Kenya’s Circular Economy Through
-              <span className="text-green-700"> Sustainable Recovery</span>
-            </h2>
-
-            <p className="mt-6 text-gray-600 leading-relaxed text-lg">
-              Wareng Material Recovery Facility (MRF) is a leading waste
-              aggregation and recycling center based in Outspan, Eldoret,
-              dedicated to transforming waste into valuable resources through
-              recovery, sorting, recycling, and community empowerment.
-            </p>
-
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              We bridge the gap between waste producers and end recyclers by
-              ensuring recoverable materials are diverted from landfills and
-              redirected into productive industrial use, helping create cleaner
-              communities and sustainable livelihoods.
-            </p>
-
-            <button className="mt-8 bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg hover:shadow-xl">
-              Learn More About Us
-            </button>
-          </div>
-
-          {/* RIGHT */}
           <div className="grid grid-cols-2 gap-5">
 
             <motion.img
@@ -96,6 +66,38 @@ export default function Home() {
             />
 
           </div>
+
+          {/* RIGHT */}
+          <div>
+            <span className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold">
+              ABOUT WARENG MRF
+            </span>
+
+            <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+              Building Kenya’s Circular Economy Through
+              <span className="text-green-700"> Sustainable Recovery</span>
+            </h2>
+
+            <p className="mt-6 text-gray-600 leading-relaxed text-lg">
+              Wareng Material Recovery Facility (MRF) is a leading waste
+              aggregation and recycling center based in Outspan, Eldoret,
+              dedicated to transforming waste into valuable resources through
+              recovery, sorting, recycling, and community empowerment.
+            </p>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              We bridge the gap between waste producers and end recyclers by
+              ensuring recoverable materials are diverted from landfills and
+              redirected into productive industrial use, helping create cleaner
+              communities and sustainable livelihoods.
+            </p>
+
+            <button className="mt-8 bg-green-700 hover:bg-green-800 text-white px-8 py-3 rounded-full font-semibold transition duration-300 shadow-lg hover:shadow-xl">
+              Learn More About Us
+            </button>
+          </div>
+
+          
 
         </div>
       </motion.section>
